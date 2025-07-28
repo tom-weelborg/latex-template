@@ -1,0 +1,15 @@
+\ProvidesPackage{styles/lists}
+
+\newif\iffigures
+
+\makeatletter
+\AtEndDocument {%
+    \if@filesw
+        \ifnum\value{figure}=\z@
+            \immediate\write\@mainaux {\global\string\figuresfalse}%
+        \else
+            \immediate\write\@mainaux {\global\string\figurestrue}%
+        \fi
+    \fi
+}
+\makeatother
