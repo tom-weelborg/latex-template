@@ -2,6 +2,7 @@
 
 \newif\iffigures
 \newif\iftables
+\newif\iflistings
 
 \makeatletter
 \AtEndDocument {%
@@ -16,6 +17,12 @@
             \immediate\write\@mainaux {\global\string\tablesfalse}%
         \else
             \immediate\write\@mainaux {\global\string\tablestrue}%
+        \fi
+
+        \ifnum\value{listing}=\z@
+            \immediate\write\@mainaux {\global\string\listingsfalse}%
+        \else
+            \immediate\write\@mainaux {\global\string\listingstrue}%
         \fi
     \fi
 }
