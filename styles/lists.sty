@@ -1,31 +1,6 @@
 \ProvidesPackage{styles/lists}
 
-\RequirePackage[printonlyused]{acronym}
-
-\newif\iffigures
-\newif\iftables
-\newif\iflistings
-
-\makeatletter
-\AtEndDocument {%
-    \if@filesw
-        \ifnum\value{figure}=\z@
-            \immediate\write\@mainaux {\global\string\figuresfalse}%
-        \else
-            \immediate\write\@mainaux {\global\string\figurestrue}%
-        \fi
-
-        \ifnum\value{table}=\z@
-            \immediate\write\@mainaux {\global\string\tablesfalse}%
-        \else
-            \immediate\write\@mainaux {\global\string\tablestrue}%
-        \fi
-
-        \ifnum\value{listing}=\z@
-            \immediate\write\@mainaux {\global\string\listingsfalse}%
-        \else
-            \immediate\write\@mainaux {\global\string\listingstrue}%
-        \fi
-    \fi
-}
-\makeatother
+\RequirePackage{styles/lists/figures}
+\RequirePackage{styles/lists/tables}
+\RequirePackage{styles/lists/listings}
+\RequirePackage{styles/lists/abbreviations}

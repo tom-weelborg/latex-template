@@ -1,0 +1,15 @@
+\ProvidesPackage{styles/lists/tables}
+
+\newif\iftables
+
+\makeatletter
+\AtEndDocument {%
+    \if@filesw
+        \ifnum\value{table}=\z@
+            \immediate\write\@mainaux {\global\string\tablesfalse}%
+        \else
+            \immediate\write\@mainaux {\global\string\tablestrue}%
+        \fi
+    \fi
+}
+\makeatother

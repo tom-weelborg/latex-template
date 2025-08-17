@@ -1,0 +1,15 @@
+\ProvidesPackage{styles/lists/listings}
+
+\newif\iflistings
+
+\makeatletter
+\AtEndDocument {%
+    \if@filesw
+        \ifnum\value{listing}=\z@
+            \immediate\write\@mainaux {\global\string\listingsfalse}%
+        \else
+            \immediate\write\@mainaux {\global\string\listingstrue}%
+        \fi
+    \fi
+}
+\makeatother
