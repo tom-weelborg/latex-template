@@ -1,3 +1,5 @@
 \printbibliography[title=\bibliographyname]
-\addcontentsline{toc}{\listtoctype}{\bibliographyname}
+\ifnum\value{bibentries}>0
+    \addcontentsline{toc}{\listtoctype}{\bibliographyname}
+\fi
 \pagebreak

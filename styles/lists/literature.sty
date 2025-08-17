@@ -8,3 +8,7 @@
 ]{biblatex}
 
 \addbibresource{shared/literature.bib}
+
+\newcounter{bibentries}
+\AtBeginBibliography{\setcounter{bibentries}{0}}
+\AtEveryBibitem{\stepcounter{bibentries}}
