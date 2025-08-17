@@ -3,3 +3,28 @@
 \RequirePackage{acro}
 
 \acsetup{make-links}
+
+\ExplSyntaxOn
+
+\clist_set:Nn \l_cases_clist {genitivesg,dativesg,accusativesg,genitivepl,dativepl,accusativepl}
+
+\clist_map_inline:Nn \l_cases_clist
+{
+    \DeclareAcroEnding{#1}{}{}
+
+    \expandafter\NewAcroCommand\csname ac#1\endcsname{m}{\csname acro#1\endcsname\UseAcroTemplate{first}{##1}}
+    \expandafter\NewAcroCommand\csname acs#1\endcsname{m}{\csname acro#1\endcsname\UseAcroTemplate{short}{##1}}
+    \expandafter\NewAcroCommand\csname acl#1\endcsname{m}{\csname acro#1\endcsname\UseAcroTemplate{long}{##1}}
+    \expandafter\NewAcroCommand\csname acf#1\endcsname{m}{%
+        \acrofull%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{first}{##1}%
+    }
+    \expandafter\NewAcroCommand\csname iacs#1\endcsname{m}{%
+        \acroindefinite%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{short}{##1}%
+    }
+}
+
+\ExplSyntaxOff
