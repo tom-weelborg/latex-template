@@ -53,5 +53,15 @@ Configuration options can be changed in [constants.tex](./shared/constants.tex).
                 <small>(Note: The number of characters will be the maximum length of the acronym.)</small>
             </td>
         </tr>
+        <tr>
+            <td>
+                <code>isappendixseparate</code>
+            </td>
+            <td>
+                <code>false</code> (default)
+                <br>
+                <code>true</code>
+            </td>
+        </tr>
     </tbody>
 </table>
