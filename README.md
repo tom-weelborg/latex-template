@@ -1,5 +1,10 @@
 # latex-template
 
+## Requirements
+
+You need a [LaTeX](https://www.latex-project.org/) distribution.
+I recommend [MiKTeX](https://miktex.org/download).
+
 ## Configuration
 
 Configuration options can be changed in [constants.tex](./shared/constants.tex).
