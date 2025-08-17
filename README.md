@@ -28,6 +28,16 @@ Configuration options can be changed in [constants.tex](./shared/constants.tex).
         </tr>
         <tr>
             <td>
+                <code>listtoctype</code>
+            </td>
+            <td>
+                <code>section</code> (default)
+                <br>
+                <code>chapter</code>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <code>listabbreviationswidth</code>
             </td>
             <td>
