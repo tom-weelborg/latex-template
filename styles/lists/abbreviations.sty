@@ -28,3 +28,12 @@
 }
 
 \ExplSyntaxOff
+
+\DeclareAcroProperty{foreign-short}
+
+\ExplSyntaxOn
+
+\NewAcroTemplate{foreignshort}{\acrowrite{foreign-short}}
+\NewAcroCommand\acforeignshort{m}{\UseAcroTemplate{foreignshort}{#1}}
+
+\ExplSyntaxOff
