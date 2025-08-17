@@ -37,3 +37,26 @@
 \NewAcroCommand\acforeignshort{m}{\UseAcroTemplate{foreignshort}{#1}}
 
 \ExplSyntaxOff
+
+\NewAcroTemplate[list]{custom}{
+    \acroheading
+    \acropreamble
+    \begin{description}[
+        labelwidth = 5.5em ,
+        leftmargin = 6em ,
+        noitemsep ,
+        itemindent = 0pt]
+        \acronymsmapF{%
+            \item[\acrowrite{short}\acroifT{alt}{/}\acrowrite{alt}]%
+            \acrowrite{list}%
+            \acroifT{foreign}{%
+                    { }(\acrowrite{foreign}\acroifT{foreign-short}{{ }(\acrowrite{foreign-short})})%
+            }%
+        }
+        { \item \AcroRerun }%
+    \end{description}%
+}
+
+\acsetup{
+    list/template = custom
+}
