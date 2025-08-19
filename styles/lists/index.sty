@@ -13,3 +13,11 @@
 }
 
 \makeindex
+
+\newif\ifindex
+
+\let\oldindex\index
+\renewcommand{\index}[1]{%
+    \indextrue%
+    \oldindex{#1}%
+}

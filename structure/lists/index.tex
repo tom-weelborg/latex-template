@@ -1,4 +1,6 @@
-\addcontentsline{toc}{\listtoctype}{\indexname}
-\printindex
-\thispagestyle{\listpagestyle}
-\pagebreak
+\ifindex
+    \addcontentsline{toc}{\listtoctype}{\indexname}
+    \printindex
+    \thispagestyle{\listpagestyle}
+    \pagebreak
+\fi
