@@ -24,6 +24,8 @@ Customizable aspects are explained [here](#configuration).
 
 ## Configuration
 
+Language can be customized [here](./styles/language.sty).
+
 Configuration options can be changed in [constants.tex](./shared/constants.tex).
 
 <table>
