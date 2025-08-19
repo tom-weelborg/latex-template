@@ -1,4 +1,6 @@
-\pdfbookmark[1]{\contentsname}{toc}
+\etocifwasempty{}{\pdfbookmark[1]{\contentsname}{toc}}
 \tableofcontents
-\thispagestyle{\listpagestyle}
-\pagebreak
+\etocifwasempty{}{%
+    \thispagestyle{\listpagestyle}
+    \pagebreak
+}
