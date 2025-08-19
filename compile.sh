@@ -15,4 +15,6 @@ makeindex -s index.ist "$OUTDIR/$TEXFILE.idx"
 
 lualatex -interaction=nonstopmode -output-directory="$OUTDIR" "$TEXFILE.tex"
 
+lualatex -interaction=nonstopmode -output-directory="$OUTDIR" "$TEXFILE.tex"
+
 echo "Compilation finished."
