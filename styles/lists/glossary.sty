@@ -1,0 +1,13 @@
+\ProvidesPackage{styles/lists/glossary}
+
+\RequirePackage[toc]{glossaries}
+
+\makeglossaries
+
+\newif\ifglossaryentries
+
+\let\oldglossaryentry\newglossaryentry
+\renewcommand{\newglossaryentry}[2]{%
+    \glossaryentriestrue%
+    \oldglossaryentry{#1}{#2}%
+}
