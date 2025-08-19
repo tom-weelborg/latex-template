@@ -60,3 +60,11 @@
 \acsetup{
     list/template = custom
 }
+
+\newif\ifacronyms
+
+\let\OldDeclareAcronym\DeclareAcronym
+\renewcommand{\DeclareAcronym}[2]{%
+    \acronymstrue%
+    \OldDeclareAcronym{#1}{#2}%
+}

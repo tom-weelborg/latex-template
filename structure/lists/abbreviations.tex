@@ -1,5 +1,7 @@
-\csname \listtoctype\endcsname*{\listabbreviationsname}
-\addcontentsline{toc}{\listtoctype}{\listabbreviationsname}
-\printacronyms[heading=none]
-\thispagestyle{\listpagestyle}
-\pagebreak
+\ifacronyms
+    \csname \listtoctype\endcsname*{\listabbreviationsname}
+    \addcontentsline{toc}{\listtoctype}{\listabbreviationsname}
+    \printacronyms[heading=none]
+    \thispagestyle{\listpagestyle}
+    \pagebreak
+\fi
