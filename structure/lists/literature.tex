@@ -1,6 +1,6 @@
-\ifnum\value{bibentries}>0
-    \csname \listtoctype\endcsname*{\bibliographyname}
+\ifnum\value{citations}>0
+    \phantomsection
     \addcontentsline{toc}{\listtoctype}{\bibliographyname}
+    \printbibliography[title=\bibliographyname]
+    \pagebreak
 \fi
-\printbibliography[title=\bibliographyname]
-\pagebreak

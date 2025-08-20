@@ -9,6 +9,9 @@
 
 \addbibresource{shared/literature.bib}
 
-\newcounter{bibentries}
-\AtBeginBibliography{\setcounter{bibentries}{0}}
-\AtEveryBibitem{\stepcounter{bibentries}}
+\newcounter{citations}
+\let\oldcite\cite
+\renewcommand{\cite}[1]{%
+    \stepcounter{citations}%
+    \oldcite{#1}%
+}
