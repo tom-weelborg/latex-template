@@ -1,11 +1,11 @@
-\ifappendix
-    \csname \listtoctype\endcsname*{\appendixname}
-    \addcontentsline{toc}{\listtoctype}{\appendixname}
-\fi
+\IfFileNotEmpty{structure/appendix/sections.tex}{
+    \begin{appendices}
+        \csname \listtoctype\endcsname{\appendixname}
+        \label{app:appendix}
 
-\begin{appendices}
+        \input{structure/appendix/sections}
+    \end{appendices}
 
-\end{appendices}
-
-\thispagestyle{\listpagestyle}
-\pagebreak
+    \thispagestyle{\listpagestyle}
+    \pagebreak
+}

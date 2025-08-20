@@ -73,15 +73,5 @@ Configuration options can be changed in [constants.tex](./shared/constants.tex).
                 <code>chapter</code>
             </td>
         </tr>
-        <tr>
-            <td>
-                <code>isappendixseparate</code>
-            </td>
-            <td>
-                <code>false</code> (default)
-                <br>
-                <code>true</code>
-            </td>
-        </tr>
     </tbody>
 </table>
