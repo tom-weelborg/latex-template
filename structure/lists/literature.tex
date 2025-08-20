@@ -1,5 +1,5 @@
 \ifnum\value{bibentries}>0
-    \phantomsection
+    \csname \listtoctype\endcsname*{\bibliographyname}
     \addcontentsline{toc}{\listtoctype}{\bibliographyname}
 \fi
 \printbibliography[title=\bibliographyname]
