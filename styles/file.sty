@@ -1,11 +1,12 @@
 \ProvidesPackage{styles/file}
 
-\RequirePackage{catchfile}
-
 \newcommand{\IfFileNotEmpty}[2]{%
     \IfFileExists{#1}{%
-        \CatchFileDef{\filecontents}{#1}{}%
-        \ifx\filecontents\empty
+        \newread\tempfile
+        \openin\tempfile=#1
+        \read\tempfile to \fileline
+        \closein\tempfile
+        \ifeof\tempfile
 
         \else
             #2
