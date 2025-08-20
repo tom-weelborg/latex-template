@@ -1,0 +1,14 @@
+\ProvidesPackage{styles/file}
+
+\RequirePackage{catchfile}
+
+\newcommand{\IfFileNotEmpty}[2]{%
+    \IfFileExists{#1}{%
+        \CatchFileDef{\filecontents}{#1}{}%
+        \ifx\filecontents\empty
+
+        \else
+            #2
+        \fi
+    }{}%
+}
