@@ -20,6 +20,8 @@ pip install latexminted
 ```
 Finally, I restarted my IDE and it worked.
 
+Alternatively, you may also choose to rely on the [listings package](https://ctan.org/pkg/listings) for code listings.
+
 ## Usage
 
 In general, changes to this template can be limited to the contents of three directories:
