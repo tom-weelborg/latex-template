@@ -38,12 +38,16 @@
 
 \ExplSyntaxOff
 
+\newcommand{\acronymlength}{5.5}
+\newcommand{\acronympadding}{0.5}
+\edef\acronymspace{\fpeval{\acronymlength + \acronympadding}}
+
 \NewAcroTemplate[list]{custom}{
     \acroheading
     \acropreamble
     \begin{description}[
-        labelwidth = 5.5em ,
-        leftmargin = 6em ,
+        labelwidth = \acronymlength em ,
+        leftmargin = \acronymspace em ,
         noitemsep ,
         itemindent = 0pt]
         \acronymsmapF{%
