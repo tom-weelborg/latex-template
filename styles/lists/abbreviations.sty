@@ -25,6 +25,22 @@
         \csname acro#1\endcsname%
         \UseAcroTemplate{short}{##1}%
     }
+
+    \expandafter\NewAcroCommand\csname Ac#1\endcsname{m}{\acroupper\csname acro#1\endcsname\UseAcroTemplate{first}{##1}}
+    \expandafter\NewAcroCommand\csname Acs#1\endcsname{m}{\acroupper\csname acro#1\endcsname\UseAcroTemplate{short}{##1}}
+    \expandafter\NewAcroCommand\csname Acl#1\endcsname{m}{\acroupper\csname acro#1\endcsname\UseAcroTemplate{long}{##1}}
+    \expandafter\NewAcroCommand\csname Acf#1\endcsname{m}{%
+        \acroupper%
+        \acrofull%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{first}{##1}%
+    }
+    \expandafter\NewAcroCommand\csname Iacs#1\endcsname{m}{%
+        \acroupper%
+        \acroindefinite%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{short}{##1}%
+    }
 }
 
 \ExplSyntaxOff
