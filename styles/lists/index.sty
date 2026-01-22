@@ -2,16 +2,6 @@
 
 \RequirePackage{makeidx}
 
-\NewDocumentCommand{\indexprint}{o m}{%
-    \IfNoValueTF{#1}
-    {%
-        #2\index{#2}%
-    }%
-    {%
-        #1\index{#2}%
-    }%
-}
-
 \makeindex
 
 \newif\ifindex
@@ -20,4 +10,14 @@
 \renewcommand{\index}[1]{%
     \indextrue%
     \oldindex{#1}%
+}
+
+\NewDocumentCommand{\indexprint}{o m}{%
+    \IfNoValueTF{#1}
+    {%
+        #2\index{#2}%
+    }%
+    {%
+        #1\index{#2}%
+    }%
 }
