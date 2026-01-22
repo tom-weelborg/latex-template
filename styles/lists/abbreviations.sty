@@ -20,10 +20,26 @@
         \csname acro#1\endcsname%
         \UseAcroTemplate{first}{##1}%
     }
+    \expandafter\NewAcroCommand\csname iac#1\endcsname{m}{%
+        \acroindefinite%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{first}{##1}%
+    }
     \expandafter\NewAcroCommand\csname iacs#1\endcsname{m}{%
         \acroindefinite%
         \csname acro#1\endcsname%
         \UseAcroTemplate{short}{##1}%
+    }
+    \expandafter\NewAcroCommand\csname iacl#1\endcsname{m}{%
+        \acroindefinite%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{long}{##1}%
+    }
+    \expandafter\NewAcroCommand\csname iacf#1\endcsname{m}{%
+        \acrofull%
+        \acroindefinite%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{first}{##1}%
     }
 
     \expandafter\NewAcroCommand\csname Ac#1\endcsname{m}{\acroupper\csname acro#1\endcsname\UseAcroTemplate{first}{##1}}
@@ -35,11 +51,30 @@
         \csname acro#1\endcsname%
         \UseAcroTemplate{first}{##1}%
     }
+    \expandafter\NewAcroCommand\csname Iac#1\endcsname{m}{%
+        \acroupper%
+        \acroindefinite%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{first}{##1}%
+    }
     \expandafter\NewAcroCommand\csname Iacs#1\endcsname{m}{%
         \acroupper%
         \acroindefinite%
         \csname acro#1\endcsname%
         \UseAcroTemplate{short}{##1}%
+    }
+    \expandafter\NewAcroCommand\csname Iacl#1\endcsname{m}{%
+        \acroupper%
+        \acroindefinite%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{long}{##1}%
+    }
+    \expandafter\NewAcroCommand\csname Iacf#1\endcsname{m}{%
+        \acroupper%
+        \acrofull%
+        \acroindefinite%
+        \csname acro#1\endcsname%
+        \UseAcroTemplate{first}{##1}%
     }
 }
 
